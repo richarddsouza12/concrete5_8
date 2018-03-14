@@ -1,0 +1,17 @@
+.no-support {
+  background-color: #ff0000;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  a {
+      color: #ffffff;
+      text-decoration: underline;
+  }
+}

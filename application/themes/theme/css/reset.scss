@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: $body-font;
+  color: $body-font-color;
+  font-weight: normal;
+  background-color: #FFF;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .modal-open {
+    margin-right: 0;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px; /* This needs to be calculated dynamically via js  - height of the footer */
+
+  /* headings */
+  h1 {
+    font-size: 43px;
+    line-height: 60px;
+    margin-bottom: 15px;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 38px;
+    line-height: 55px;
+    margin-bottom: 13px;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 12px;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 11px;
+    font-weight: normal;
+  }
+  h5 {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+  h6 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+
+  /* form fields */
+  input, textarea, select {
+    font-family: $body-font;
+    color: $body-font-color;
+    font-weight: normal;
+    font-size: $body-font-size;
+    line-height: 24px;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  select {
+    cursor: pointer;
+    padding: 9px 6px 9px;
+    border: 0;
+    border-radius: 0;
+    font-size: $body-font-size;
+    -webkit-appearance: none;
+    height: 36px;
+    -moz-appearance: none;
+    background: none;
+    text-indent: 0.01px;
+    color: $body-font-color;
+    font-family: $body-font;
+    text-overflow: "";
+  }
+}
+
+p {
+  font-size: $body-font-size;
+  color: $body-font-color;
+  line-height: 28px;
+  margin-bottom: 10px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+a {
+  color: $body-font-color;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+ul {
+  padding-left: 0;
+  li {
+    line-height: 26px;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border: none 0;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input:focus, textarea:focus {
+  outline: transparent none;
+}
+
+select:focus {
+  outline: none;
+}
+
+section {
+  display: block;
+}
+
+.errors, .success {
+  background: #FFFFFF;
+  display: block;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.errors {
+  color: #f04f71;
+}
+
+.success {
+  color: #51bf9b;
+}
+
+/* text selection color */
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+/* scrollbar color only for windows OS */
+.win-os ::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  cursor: pointer;
+  @include screen768 {
+    width: 4px;
+  }
+}
+
+.win-os ::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+
+.win-os ::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #ECECEC;
+  @include screen768 {
+    width: 4px;
+  }
+}
+
+/* placeholder */
+input, textarea {
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+  &:-moz-placeholder {
+    color: #fff;
+  }
+  &::-moz-placeholder {
+    color: #fff;
+  }
+  &:-ms-input-placeholder {
+    color: #fff;
+  }
+  /* hide placeholder on focus of input */
+  &:focus::-webkit-input-placeholder {
+    color: transparent !important;
+  }
+  &:focus:-moz-placeholder {
+    color: transparent !important;
+  }
+  /* FF 4-18 */
+  &:focus::-moz-placeholder {
+    color: transparent !important;
+  }
+  /* FF 19+ */
+  &:focus:-ms-input-placeholder {
+    color: transparent !important;
+  }
+  /* IE 10+ */
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+} 
+
+.ios-device * {
+  background-attachment: scroll;
+}
+
+/* wow default css to avoid flickering */
+.wow{
+  visibility: hidden;
+  @include screen1024{
+    visibility: visible;
+  }
+}

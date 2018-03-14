@@ -1,0 +1,208 @@
+/* Site Loader */
+.site-loader {
+  display: none;
+  background: #FFFFFF;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  @include transition(width .6s $transitionEffect);
+  &.anim {
+    width: 25%;
+  }
+}
+
+.logo-middle {
+  display: none;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: calc(50% - 100px);
+  width: 230px;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+/* Formidable Lable movement */
+.formidable{
+  .formidable_message{
+    &.error, &.success{
+      padding: 10px 20px;
+    }
+    &.error{
+      background: #ff0000;
+    }
+    &.success{
+      background: green;
+    }
+    div{
+      font-size: $body-font-size-medium;
+      line-height: 20px;
+      color: #fff;
+    }
+  }
+  .element{
+    margin-bottom: 20px;
+    position: relative;
+    label{
+      position: absolute;
+      top: 12px;
+      left: 0;
+      pointer-events: none;
+      padding: 0;
+      color: #2b2b2b;
+      color: rgba(43, 43, 43, 0.5);
+      font-size: $body-font-size;
+      line-height: 20px;
+      font-weight: 400;
+      margin: 0;
+      @include transition(font-size 0.3s $transitionEffect, top 0.3s $transitionEffect);
+      @include screen640{
+        font-size: 13px;
+        line-height: 22px;
+      }
+      &.focus {
+        top: -7px;
+        font-size: 13px;
+        line-height: 22px;
+        @include screen640{
+          font-size: $body-font-size-small;
+        }
+      }
+      .required{
+        color: #ff0000;
+      }
+    }
+    input,textarea{
+      width: 100%;
+      border:0;
+      border-bottom: 2px solid #7d7c7c;
+      color: #2b2b2b;
+      color: rgba(43,43,43,0.5);
+      padding: 10px 0;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    textarea{
+      min-height: 120px;
+      max-height: 150px;
+      min-width: 100%;
+      max-width: 100%;
+    }
+    .buttons{
+      padding-top: 15px;
+      input{
+        width: auto;
+        background:none;
+        border: 1px solid #232d39;
+        border-radius: 25px;
+        padding: 10px 20px;
+        color: #232d39;
+        text-transform: uppercase;
+        opacity: 1;
+        font-size: $body-font-size-small;
+        font-family: 'robotoBlack';
+        width: 50%;
+        text-align: center;
+        letter-spacing: 2px;
+        &:hover{
+          background: #232d39;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Push div to keep footer sticky at the bootom */
+.push {
+  height: 50px; /* this needs to be recalculated via js - height of the footer */
+}
+
+/* Developed by */
+.developed-by {
+  width: 120px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+/* Go to top */
+#gotoTop{
+  position: fixed;
+  right: 10px;
+  bottom: 60px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  @include transition(all .4s $transitionEffect);
+  @include transform(rotate(180deg));
+  @include screen720{
+    display: none;
+  }
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  &.switch{
+    .icon-arrow-down{
+      &:hover{
+        &::before{
+          color: $orange-color;
+        }
+      }
+      &::before{
+        color: #fff;
+      }
+    }
+  }
+  .icon-arrow-down{
+    &:hover{
+      &::before{
+        color: $orange-color;
+      }
+    }
+    &::before{
+      color: #000;
+    }
+  }
+}
+
+.landscape-alert {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 9999;
+  display: none;
+  padding: 20% 10% 0;
+  overflow: hidden;
+  @include landscape{
+    /* display: block; */
+  }
+  p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #131C4E;
+    span {
+      margin-top: 10px;
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 5px 10px;
+    }
+  }
+}

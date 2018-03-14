@@ -1,0 +1,22 @@
+
+@import "fontawesome/font-awesome";
+
+@font-face {
+  font-family: 'Amethysta';
+  src: url('#{$assetPath}fonts/Amethysta-Regular.eot');
+  src: url('#{$assetPath}fonts/Amethysta-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$assetPath}fonts/Amethysta-Regular.woff') format('woff'),
+  url('#{$assetPath}fonts/Amethysta-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('#{$assetPath}fonts/MyriadPro-Regular.eot');
+  src: url('#{$assetPath}fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$assetPath}fonts/MyriadPro-Regular.woff') format('woff'),
+  url('#{$assetPath}fonts/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
